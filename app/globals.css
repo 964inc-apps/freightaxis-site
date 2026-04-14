@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top, rgba(0, 174, 239, 0.18), transparent 28%),
+    radial-gradient(circle at 82% 14%, rgba(30, 144, 255, 0.12), transparent 20%),
+    linear-gradient(180deg, #12161c 0%, #0f1115 100%);
+  color: #e5e9f0;
+  font-family: var(--font-body), sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading), sans-serif;
+  letter-spacing: -0.04em;
+}
+
+* {
+  border-color: rgba(229, 233, 240, 0.08);
+}
+
+::selection {
+  background: rgba(0, 174, 239, 0.28);
+  color: #e5e9f0;
+}
+
+@layer utilities {
+  .surface-card {
+    @apply rounded-[1.75rem] border border-white/[0.08] bg-carbon/90 shadow-soft backdrop-blur-sm;
+  }
+
+  .surface-panel {
+    @apply rounded-[1.5rem] border border-white/[0.08] bg-white/[0.03];
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center rounded-full border border-brand/20 bg-brand/10 px-3 py-1 text-[0.68rem] font-semibold uppercase tracking-[0.24em] text-brand;
+  }
+
+  .section-shell {
+    @apply mt-20 sm:mt-24;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .tech-mesh {
+    background-image:
+      radial-gradient(circle at top left, rgba(0, 174, 239, 0.1), transparent 34%),
+      linear-gradient(rgba(229, 233, 240, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(229, 233, 240, 0.03) 1px, transparent 1px);
+    background-position: 0 0, 0 0, 0 0;
+    background-size: auto, 36px 36px, 36px 36px;
+  }
+}
